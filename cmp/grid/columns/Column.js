@@ -610,19 +610,17 @@ export class Column {
         if (tooltipSpec || editor) {
             // ag-Grid requires a return from getter, but value we actually use is computed below
             ret.tooltipValueGetter = () => 'tooltip';
-            ret.tooltipComponentFramework = forwardRef((props, ref) => {
-                const {location} = props;
-                useImperativeHandle(ref, () => ({
-                    getReactContainerClasses() {
-                        if (location === 'header') return ['ag-tooltip'];
-                        return ['xh-grid-tooltip', tooltipElement ? 'xh-grid-tooltip--custom' : 'xh-grid-tooltip--default'];
-                    }
-                }), [location]);
-
-                const agParams = props,
+            ret.tooltipComponentFramework = (props) => {
+                const {location} = props,
+                    agParams = props,
                     {data: record} = agParams;
 
-                if (location === 'header') return div(this.headerTooltip);
+                if (location === 'header') {
+                    return div({
+                        className: 'ag-tooltip',
+                        item: this.headerTooltip
+                    });
+                }
 
                 if (!record?.isRecord) return null;
 
@@ -632,7 +630,7 @@ export class Column {
                     if (!isEmpty(errors)) {
                         return ul({
                             className: classNames(
-                                'xh-grid-tooltip--validation',
+                                'xh-grid-tooltip xh-grid-tooltip--validation',
                                 errors.length === 1 ? 'xh-grid-tooltip--validation--single' : null
                             ),
                             items: errors.map((it, idx) => li({key: idx, item: it}))
@@ -648,8 +646,13 @@ export class Column {
                     tooltipSpec(val, {record, column: this, gridModel, agParams}) :
                     val;
 
-                return ret ?? null;
-            });
+                if (!ret) return null;
+
+                return div({
+                    item: ret,
+                    className: `xh-grid-tooltip ${tooltipElement ? 'xh-grid-tooltip--custom' : 'xh-grid-tooltip--default'}`
+                });
+            };
         }
 
         // Generate CSS classes for cells.
