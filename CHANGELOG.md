@@ -10,6 +10,7 @@
   `GridModel.restoreDefaultsAsync()` to additionally reset app-specific state.
 * Added `AppSpec.lockoutPanel`, allowing apps to specify a custom component.
 * Added support for "sync with system" as a theme option.
+* Added `XH.setTheme()` and deprecated `XH.setDarkTheme()`.
 
 ### 🐞 Bug Fixes
 
