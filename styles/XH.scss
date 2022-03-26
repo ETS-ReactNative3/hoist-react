@@ -36,7 +36,7 @@ body.xh-app {
   overflow: hidden;
 
   ::-webkit-scrollbar {
-    -webkit-appearance: none;
+    appearance: none;
     background-color: var(--xh-scrollbar-bg);
     width: var(--xh-scrollbar-size-px);
     height: var(--xh-scrollbar-size-px);

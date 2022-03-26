@@ -15,7 +15,7 @@
     left: 0;
     border-bottom-width: var(--border-width);
     border-right-width: var(--border-width);
-    border-radius: 0 0 4px 0;
+    border-radius: 0 0 4px;
 
     &.xh-loading-indicator--has-spinner {
       .xh-loading-indicator__message {
@@ -57,7 +57,7 @@
     right: 0;
     border-top-width: var(--border-width);
     border-left-width: var(--border-width);
-    border-radius: 4px 0 0 0;
+    border-radius: 4px 0 0;
 
     &.xh-loading-indicator--has-spinner {
       .xh-loading-indicator__message {

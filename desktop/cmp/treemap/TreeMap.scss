@@ -26,10 +26,8 @@
     &.highcharts-point-select {
       // We need to *remove* the stroke in order for the inset outline to work
       stroke: none;
-      outline-style: solid;
-      outline-width: 1px;
       outline-offset: -1px;
-      outline-color: var(--xh-blue-light);
+      outline: var(--xh-blue-light) solid 1px;
     }
   }
 

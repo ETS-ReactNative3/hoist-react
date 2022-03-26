@@ -33,9 +33,9 @@
     "@fortawesome/pro-light-svg-icons": "~5.15.4",
     "@fortawesome/pro-regular-svg-icons": "~5.15.4",
     "@fortawesome/pro-solid-svg-icons": "~5.15.4",
-    "@fortawesome/react-fontawesome": "~0.1.17",
+    "@fortawesome/react-fontawesome": "~0.1.18",
     "@onsenui/fastclick": "~1.1.1",
-    "@popperjs/core": "~2.11.0",
+    "@popperjs/core": "~2.11.4",
     "@seznam/compose-react-refs": "~1.0.5",
     "classnames": "~2.3.0",
     "clipboard-copy": "~4.0.1",
@@ -71,7 +71,7 @@
     "router5": "~7.0.2",
     "router5-plugin-browser": "~7.0.2",
     "semver": "~7.3.4",
-    "store2": "~2.13.1",
+    "store2": "~2.13.2",
     "ua-parser-js": "~1.0.2"
   },
   "peerDependencies": {
@@ -84,9 +84,9 @@
     "lint-staged": "~10.5.3",
     "react": "~17.0.1",
     "react-dom": "~17.0.1",
-    "stylelint": "~13.13.1",
-    "stylelint-config-standard": "~22.0.0",
-    "stylelint-scss": "~3.21.0"
+    "stylelint": "~14.6.1",
+    "stylelint-config-standard": "~25.0.0",
+    "stylelint-config-standard-scss": "~3.0.0"
   },
   "resolutions": {
     "jimp": "^0.16.1",

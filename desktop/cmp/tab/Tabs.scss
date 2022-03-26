@@ -43,8 +43,8 @@
     max-width: 100%;
 
     // Flip the indicator to be on top of the tab label
-    .bp3-tab[aria-selected=true] {
-      box-shadow: inset 0 3px 0 currentColor;
+    .bp3-tab[aria-selected="true"] {
+      box-shadow: inset 0 3px 0 currentcolor;
     }
   }
 

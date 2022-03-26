@@ -1,18 +1,20 @@
 {
-    "plugins": [
-        "stylelint-scss"
-    ],
     "extends": [
-        "stylelint-config-standard"
+        "stylelint-config-standard-scss"
     ],
     "rules": {
+        "alpha-value-notation": null,
+        "at-rule-empty-line-before": null,
         "at-rule-no-unknown": null,
         "block-closing-brace-empty-line-before": null,
         "block-closing-brace-space-before": null,
         "block-opening-brace-space-after": null,
+        "color-function-notation": null,
         "custom-property-empty-line-before": null,
         "declaration-block-trailing-semicolon": null,
+        "hue-degree-notation": "number",
         "max-empty-lines": 2,
+        "max-line-length": null,
         "no-descending-specificity": null,
         "no-duplicate-selectors": null,
         "no-eol-whitespace": null,
@@ -23,9 +25,14 @@
         ],
         "rule-empty-line-before": null,
         "scss/at-rule-no-unknown": true,
+        "scss/dollar-variable-empty-line-before": null,
+        "scss/double-slash-comment-empty-line-before": null,
+        "scss/double-slash-comment-whitespace-inside": null,
+        "selector-class-pattern": null,
         "selector-pseudo-class-no-unknown": [
             true,
             {"ignorePseudoClasses": ["export"]}
-        ]
+        ],
+        "string-quotes": null
     }
 }
